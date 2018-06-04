@@ -26,9 +26,7 @@ button {
 
 header {
 	height: 60px;
-	display: grid;
-	grid-template-columns: 1fr auto;
-	align-content: center;
+	display: inline-flex;
 	background-color: #fff;
 	position: fixed;
 	top: 0;
@@ -36,12 +34,8 @@ header {
 	width: 100%;
 }
 
-nav {
-	align-content: center;
-}
-
 nav ul {
-	align-content: center;
+	line-height: 28px;
 }
 
 nav ul li {
