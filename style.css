@@ -27,7 +27,7 @@ button {
 	font-weight: 300;
 	font-size: 18px;
 	height: 40px;
-	margin: 10px 0;
+	margin: 0;
 }
 
 button:hover {
@@ -39,37 +39,35 @@ button:hover {
 
 header {
 	width: 100%;
-	height: 60px;
+	height: 40px;
 	background-color: rgba(255, 255, 255, .8);
 	z-index: 100;
-	padding: 0 40px;
+	padding: 10px 0;
 	box-shadow: 0px 0px 10px 0px;
 	position: fixed;
 	top: 0;
 	overflow: hidden;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 60px;
-	grid-tempalte-areas: "header_left  header_right";
+	
+	display: flex;
+	justify-content: space-between;
+
 }
 
-header:first-child {
-	align-items: center;
-	grid-area: header_left;
-}
-
-header:last-child {
-	align-items: center;
-	grid-area: header_right;
-}
-
-header:last-child button {
-	right: 0px;
+.nav_title {
+	display: flex;
+	order:1;
+	margin-left: 40px;
 }
 
 #logo {
-	width: 100px;
+	height: 40px;
 	margin-left: 20px;
+}
+
+#header_cta {
+	order: 2;
+	margin-right: 40px;
+
 }
 
 /* Display Cards */
@@ -83,11 +81,10 @@ header:last-child button {
 }
 
 .hero_block {
-	margin: 0;
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	font-size: 2rem;
-	transform: translate(-50%, -50%);
+	bottom: 20%;
+	left: 40px;
+	color: white;
+	margin: 0;
 
 }
