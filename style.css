@@ -9,6 +9,7 @@ body {
 
 h1 {
 	font-size: 3em;
+	margin: 0;
 	font-weight: 700;
 }
 
@@ -23,7 +24,8 @@ p {
 
 button {
 	background: transparent;
-	border: 1px solid #000;
+	color: #fff;
+	border: 1px solid #fff;
 	font-weight: 300;
 	font-size: 18px;
 	height: 40px;
@@ -31,42 +33,41 @@ button {
 }
 
 button:hover {
-	color: #fff;
-	background: rgba(0, 0, 0, .8);
+	color: #000;
+	mix-blend-mode: screen;
+	background: rgba(255, 255, 255, .8);
 }
 
 /* Header */
 
 header {
 	width: 100%;
-	height: 40px;
-	background-color: rgba(255, 255, 255, .8);
 	z-index: 100;
-	padding: 10px 0;
-	box-shadow: 0px 0px 10px 0px;
 	position: fixed;
 	top: 0;
 	overflow: hidden;
-	
+}
+
+.nav {
+	padding: 30px 40px 0px 40px;
 	display: flex;
 	justify-content: space-between;
-
+	align-items: center;
 }
 
 .nav_title {
 	display: flex;
+	align-items: center;
 	order:1;
-	margin-left: 40px;
 }
 
 #logo {
-	height: 40px;
+	height: 80px;
 	margin-left: 20px;
 }
 
 #header_cta {
 	order: 2;
-	margin-right: 40px;
 
 }
 
@@ -75,19 +76,24 @@ header {
 .page {
 	height: 100vh;
 	width: 100%;
+}
+
+#home {
+	background: 
+	linear-gradient(
+	    rgba(0, 0, 0, 0.2),
+	    rgba(0, 0, 0, 0.2)),
+		url('assets/Marsh_Image_2000_08.jpg');
 	background-size: cover;
 	background-position: center;
 }
 
-#home {
-	background: url('assets/RooseveltReno_Image_2000_03.jpg');
-}
-
 .hero_block {
 	position: absolute;
+	background: rgba(255, 255, 255, .8);
 	bottom: 20%;
 	left: 40px;
-	color: white;
+	color: #000;
 	margin: 0;
 
 }
