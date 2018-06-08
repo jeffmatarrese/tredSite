@@ -35,7 +35,7 @@ button {
 button:hover {
 	color: #000;
 	mix-blend-mode: screen;
-	background: rgba(255, 255, 255, .8);
+	background: #fff;
 }
 
 /* Header */
@@ -81,8 +81,8 @@ header {
 #home {
 	background: 
 	linear-gradient(
-	    rgba(0, 0, 0, 0.2),
-	    rgba(0, 0, 0, 0.2)),
+	    rgba(100, 100, 100, 0.5),
+	    rgba(100, 100, 100, 0.5)),
 		url('assets/Marsh_Image_2000_08.jpg');
 	background-size: cover;
 	background-position: center;
