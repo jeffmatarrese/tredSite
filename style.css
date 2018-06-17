@@ -3,23 +3,23 @@
 body {
 	margin: 0;
 	min-width: 100%;
-	font-size: 14px;
-	font-family: sans-serif;
+	font-size: 16px;
+	font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
-	font-size: 3em;
+	font-size: 4em;
 	margin: 0;
 	font-weight: 700;
 }
 
 h2 {
-	font-size: 2em;
-	font-weight: 400;
+	font-size: 2.5em;
+	font-weight: 700;
 }
 
 p {
-	font-weight: 300;
+	font-weight: 400;
 }
 
 button {
@@ -46,10 +46,16 @@ header {
 	position: fixed;
 	top: 0;
 	overflow: hidden;
+/*  acrylic test
+	background-color: rgba(100,100,100,.9);
+	@supports (backdrop-filter: blur(20px)) or (-webkit-backdrop-filter: blur(20px)) {
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    background-color: rgba(100,100,100,.3);*/
 }
 
 .nav {
-	padding: 30px 40px 0px 40px;
+	padding: 10px 40px 0px 40px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -71,11 +77,14 @@ header {
 
 }
 
-/* Display Cards */
+/* Main - Page Starter */
 
-.page {
+.titleBlock {
 	height: 100vh;
 	width: 100%;
+	display: flex;
+	align-content: center;
+	align-items: center;
 }
 
 #home {
@@ -89,11 +98,94 @@ header {
 }
 
 .hero_block {
-	position: absolute;
-	background: rgba(255, 255, 255, .8);
-	bottom: 20%;
-	left: 40px;
-	color: #000;
-	margin: 0;
-
+	width: 50%;
+	margin: auto;
+	color: white;
 }
+
+
+/* Main - Bricks */
+
+.brickWrapper {
+	width: 100%;
+	display: grid;
+	grid-template-rows: 480px calc(0.33*100vw) 480px 480px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-areas: "intro intro intro"
+						"newHome  remodel  smallBiz"
+						"about  about  about"
+						"testimonials  testimonials  outreach";
+}
+
+.brickWrapper > .intro {
+	grid-area: intro;
+}
+
+
+.brickWrapper > .newHome {
+	grid-area: newHome;
+	background: 
+		linear-gradient(
+	    rgba(100, 100, 100, 0.5),
+	    rgba(100, 100, 100, 0.5)),
+		url('assets/Marsh_Image_2000_08.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+.brickWrapper > div {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.brickWrapper > .remodel {
+	grid-area: remodel;
+	background: 
+		linear-gradient(
+	    rgba(0, 0, 0, 0.6),
+	    rgba(0, 0, 0, 0.6)),
+		url('assets/Marsh_Image_2000_08.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+.brickWrapper > .smallBiz {
+	grid-area: smallBiz;
+	background: 
+		linear-gradient(
+	    rgba(100, 100, 100, 0.5),
+	    rgba(100, 100, 100, 0.5)),
+		url('assets/Marsh_Image_2000_08.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+.brickWrapper > .about {
+	grid-area: about;
+}
+
+.brickWrapper > .testimonials {
+	grid-area: testimonials;
+}
+
+.brickWrapper > .outreach {
+	grid-area: outreach;
+}
+
+.service {
+	color: white;
+}
+
+/* Footer */
+
+footer {
+	height: 100px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
