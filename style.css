@@ -16,6 +16,7 @@ h1 {
 h2 {
 	font-size: 2.5em;
 	font-weight: 700;
+	margin: 0;
 }
 
 p {
@@ -74,7 +75,6 @@ header {
 
 #header_cta {
 	order: 2;
-
 }
 
 /* Main - Page Starter */
@@ -83,8 +83,13 @@ header {
 	height: 100vh;
 	width: 100%;
 	display: flex;
-	align-content: center;
+	flex-direction: row;
 	align-items: center;
+	justify-content: center;
+	color: white;
+}
+
+.titleBlock > * {
 }
 
 #home {
@@ -95,12 +100,6 @@ header {
 		url('assets/Marsh_Image_2000_08.jpg');
 	background-size: cover;
 	background-position: center;
-}
-
-.hero_block {
-	width: 50%;
-	margin: auto;
-	color: white;
 }
 
 
@@ -117,8 +116,18 @@ header {
 						"testimonials  testimonials  outreach";
 }
 
+.brickWrapper > div {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
 .brickWrapper > .intro {
 	grid-area: intro;
+	background-color: #333;
+	color: white;
 }
 
 
@@ -133,21 +142,13 @@ header {
 	background-position: center;
 }
 
-.brickWrapper > div {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-}
-
 .brickWrapper > .remodel {
 	grid-area: remodel;
 	background: 
 		linear-gradient(
 	    rgba(0, 0, 0, 0.6),
 	    rgba(0, 0, 0, 0.6)),
-		url('assets/Marsh_Image_2000_08.jpg');
+		url('assets/RooseveltReno_Image_2000_03.jpg');
 	background-size: cover;
 	background-position: center;
 }
@@ -158,17 +159,21 @@ header {
 		linear-gradient(
 	    rgba(100, 100, 100, 0.5),
 	    rgba(100, 100, 100, 0.5)),
-		url('assets/Marsh_Image_2000_08.jpg');
+		url('assets/BarCharlie_Image_2000_02.jpg');
 	background-size: cover;
 	background-position: center;
 }
 
 .brickWrapper > .about {
 	grid-area: about;
+	background-color: #333;
+	color: white;
 }
 
 .brickWrapper > .testimonials {
 	grid-area: testimonials;
+	background-color: #777;
+	color: white;
 }
 
 .brickWrapper > .outreach {
@@ -185,7 +190,13 @@ footer {
 	height: 100px;
 	width: 100%;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
+	background: #333;
+}
+
+footer > * {
+	color: white;
+	font-size: 12px;
 }
 
