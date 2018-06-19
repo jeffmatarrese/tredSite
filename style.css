@@ -90,13 +90,15 @@ header {
 }
 
 .titleBlock > * {
+	padding: 10%;
+	text-align: center;
 }
 
 #home {
 	background: 
 	linear-gradient(
-	    rgba(100, 100, 100, 0.5),
-	    rgba(100, 100, 100, 0.5)),
+	    rgba(50, 50, 50, 0.5),
+	    rgba(50, 50, 50, 0.5)),
 		url('assets/Marsh_Image_2000_08.jpg');
 	background-size: cover;
 	background-position: center;
@@ -108,20 +110,22 @@ header {
 .brickWrapper {
 	width: 100%;
 	display: grid;
-	grid-template-rows: 480px calc(0.33*100vw) 480px 480px;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-areas: "intro intro intro"
-						"newHome  remodel  smallBiz"
-						"about  about  about"
-						"testimonials  testimonials  outreach";
+	grid-template-rows: calc(0.5*100vw) calc(0.5*100vw) calc(0.5*100vw) calc(0.5*100vw) calc(0.5*100vw);
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: "intro intro"
+						 "newHome  newHome"
+						 "remodel commercial"
+						 "about  about"
+						 "testimonials  outreach";
 }
 
 .brickWrapper > div {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
+	padding: 5%;
+	display: grid;
 	align-items: center;
 	justify-content: center;
+	text-align: center;
+
 }
 
 .brickWrapper > .intro {
@@ -130,13 +134,13 @@ header {
 	color: white;
 }
 
-
+/* sets background images for bricks */
 .brickWrapper > .newHome {
 	grid-area: newHome;
 	background: 
 		linear-gradient(
-	    rgba(100, 100, 100, 0.5),
-	    rgba(100, 100, 100, 0.5)),
+	    rgba(50, 50, 50, 0.6),
+	    rgba(50, 50, 50, 0.6)),
 		url('assets/Marsh_Image_2000_08.jpg');
 	background-size: cover;
 	background-position: center;
@@ -146,19 +150,19 @@ header {
 	grid-area: remodel;
 	background: 
 		linear-gradient(
-	    rgba(0, 0, 0, 0.6),
-	    rgba(0, 0, 0, 0.6)),
+	    rgba(50, 50, 50, 0.6),
+	    rgba(50, 50, 50, 0.6)),
 		url('assets/RooseveltReno_Image_2000_03.jpg');
 	background-size: cover;
 	background-position: center;
 }
 
-.brickWrapper > .smallBiz {
-	grid-area: smallBiz;
+.brickWrapper > .commercial {
+	grid-area: commercial;
 	background: 
 		linear-gradient(
-	    rgba(100, 100, 100, 0.5),
-	    rgba(100, 100, 100, 0.5)),
+	    rgba(50, 50, 50, 0.6),
+	    rgba(50, 50, 50, 0.6)),
 		url('assets/BarCharlie_Image_2000_02.jpg');
 	background-size: cover;
 	background-position: center;
@@ -180,6 +184,12 @@ header {
 	grid-area: outreach;
 }
 
+.outreach button {
+	background: transparent;
+	color: #333;
+	border: 1px solid #333;
+}
+
 .service {
 	color: white;
 }
@@ -190,7 +200,7 @@ footer {
 	height: 100px;
 	width: 100%;
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
 	background: #333;
 }
@@ -199,4 +209,19 @@ footer > * {
 	color: white;
 	font-size: 12px;
 }
+
+/* Larger Screens */
+
+@media only screen and (min-width: 1200px) {
+	.brickWrapper {
+	width: 100%;
+	display: grid;
+	grid-template-rows: 480px calc(0.33*100vw) 480px 480px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-areas: "intro intro intro"
+						 "newHome  remodel  commercial"
+						 "about  about  about"
+						 "testimonials  testimonials  outreach";
+}
+
 
