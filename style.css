@@ -77,8 +77,8 @@ header {
 }
 
 #logo {
-	height: 60px;
-	margin-left: 20px;
+	height: 40px;
+	margin-right: 10px;
 }
 
 #header_cta {
@@ -88,7 +88,7 @@ header {
 /* Main - Page Starter */
 
 .titleBlock {
-	height: 90vh;
+	height: 100vh;
 	width: 100%;
 	display: flex;
 	flex-direction: row;
@@ -103,11 +103,7 @@ header {
 }
 
 #home {
-	background: 
-	linear-gradient(
-	    rgba(50, 50, 50, 0.5),
-	    rgba(50, 50, 50, 0.5)),
-		url('assets/Marsh_Image_2000_08.jpg');
+	background: url('assets/Marsh_Image_2000_08.jpg');
 	background-size: cover;
 	background-position: center;
 }
@@ -118,7 +114,7 @@ header {
 .brickWrapper {
 	width: 100%;
 	display: grid;
-	grid-template-rows: 400px 400px 400px 400px 400px 400px 400px;
+	grid-template-rows: 400px 300px 300px 300px 400px 400px 400px;
 	grid-template-columns: 1fr;
 	grid-template-areas: "intro"
 						 "newHome"
