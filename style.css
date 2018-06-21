@@ -9,13 +9,13 @@ body {
 }
 
 h1 {
-	font-size: 4em;
+	font-size: 3em;
 	margin: 0;
 	font-weight: 700;
 }
 
 h2 {
-	font-size: 2.5em;
+	font-size: 2em;
 	font-weight: 700;
 	margin: 0;
 }
@@ -31,7 +31,7 @@ p {
 }
 
 button {
-	background: transparent;
+	background: #000;
 	color: #fff;
 	border: 1px solid #fff;
 	font-weight: 300;
@@ -54,9 +54,8 @@ header {
 	position: fixed;
 	top: 0;
 	overflow: hidden;
-	filter: drop-shadow(0px 2px 5px);
-
-	background-color: rgba(255,255,255,.9);
+	filter: drop-shadow(0px 2px 2px #333);
+	background-color: rgb(255,255,255);
 	@supports (backdrop-filter: blur(20px)) or (-webkit-backdrop-filter: blur(20px)) {
 							    -webkit-backdrop-filter: blur(20px);
 							    backdrop-filter: blur(20px);
@@ -88,25 +87,62 @@ header {
 /* Main - Page Starter */
 
 .titleBlock {
-	height: 100vh;
+	top: 40px;
+	height: 98vh;
 	width: 100%;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-	color: white;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-areas: "a b"
+						 "c d"
+						 "e f";
+	grid-column-gap: 10px;
+	grid-row-gap: 10px;
+
 }
 
 .titleBlock > * {
-	padding: 10%;
-	text-align: center;
-}
-
-#home {
-	background: url('assets/Marsh_Image_2000_08.jpg');
 	background-size: cover;
 	background-position: center;
 }
+
+#img_a {
+	background: url('assets/HMP_Image_2000_03.jpg');
+	grid-area: a;
+	background-size: cover;
+	background-position: center;
+}
+#img_b {
+	background: url('assets/RooseveltReno_Image_2000_03.jpg');
+	grid-area: b;
+	background-size: cover;
+	background-position: center;
+}
+#img_c {
+	background: url('assets/Marsh_Image_2000_06.jpg');
+	grid-area: c;
+	background-size: cover;
+	background-position: center;
+}
+#img_d {
+	background: url('assets/Marsh_Image_2000_08.jpg');
+	grid-area: d;
+	background-size: cover;
+	background-position: center;
+}
+#img_e {
+	background: url('assets/WhidbeyRetreat_Image_2000_02.jpg');
+	grid-area: e;
+	background-size: cover;
+	background-position: center;
+}
+#img_f {
+	background: url('assets/BarCharlie_Image_2000_02.jpg');
+	grid-area: f;
+	background-size: cover;
+	background-position: center;
+}
+
 
 
 /* Main - Bricks */
@@ -114,12 +150,13 @@ header {
 .brickWrapper {
 	width: 100%;
 	display: grid;
-	grid-template-rows: 400px 300px 300px 300px 400px 400px 400px;
+	grid-template-rows: 400px 300px 300px 300px 400px 400px 400px 400px;
 	grid-template-columns: 1fr;
 	grid-template-areas: "intro"
 						 "newHome"
 						 "remodel"
 						 "commercial"
+						 "workImg"
 						 "about"
 						 "testimonials"
 						 "outreach";
@@ -136,45 +173,26 @@ header {
 
 .brickWrapper > .intro {
 	grid-area: intro;
-	background-color: #333;
-	color: white;
-}
-
-.brickWrapper > .serviceList {
-	background: #fff;
-	color: #000;
+	background-color: #fff;
+	color: #333;
 }
 
 /* sets background images for bricks */
 .brickWrapper > .newHome {
 	grid-area: newHome;
-	background: #000;
-/*		linear-gradient(
-	    rgba(50, 50, 50, 0.6),
-	    rgba(50, 50, 50, 0.6)),
-		url('assets/Marsh_Image_2000_08.jpg');
-	background-size: cover;
-	background-position: center;*/
 }
 
 .brickWrapper > .remodel {
 	grid-area: remodel;
-	background: #000;
-	/*	linear-gradient(
-	    rgba(50, 50, 50, 0.6),
-	    rgba(50, 50, 50, 0.6)),
-		url('assets/RooseveltReno_Image_2000_03.jpg');
-	background-size: cover;
-	background-position: center;*/
 }
 
 .brickWrapper > .commercial {
 	grid-area: commercial;
-	background: #000;
-/*		linear-gradient(
-	    rgba(50, 50, 50, 0.6),
-	    rgba(50, 50, 50, 0.6)),
-		url('assets/BarCharlie_Image_2000_02.jpg');*/
+}
+
+.brickWrapper > .workImg {
+	background: url('assets/Working_Stock.jpg');
+	grid-area: workImg;
 	background-size: cover;
 	background-position: center;
 }
@@ -202,7 +220,8 @@ header {
 }
 
 .service {
-	color: white;
+	background: #eee;
+	color: #333;
 }
 
 /* Footer */
@@ -224,15 +243,30 @@ footer > * {
 /* Larger Screens */
 
 @media only screen and (min-width: 1100px) {
+	.titleBlock {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas: "a b c"
+						 "d e f";
+
+	}
 	.brickWrapper {
 	width: 100%;
 	display: grid;
-	grid-template-rows: 480px calc(0.33*100vw) 480px 480px;
+	grid-template-rows: 480px 480px 100vh 400px 480px;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-areas: "intro  intro  intro"
 						 "newHome remodel commercial"
+						 "workImg workImg workImg"
 						 "about about about"
 						 "testimonials testimonials outreach";
-}
+	}
 
+	h1 {
+		font-size: 4em;
+	}
 
+	h2 {
+		font-size: 2.5em;
+	}
