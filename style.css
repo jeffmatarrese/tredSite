@@ -9,13 +9,13 @@ body {
 }
 
 h1 {
-	font-size: 3em;
+	font-size: 5em;
 	margin: 0;
 	font-weight: 700;
 }
 
 h2 {
-	font-size: 2em;
+	font-size: 2.5em;
 	font-weight: 700;
 	margin: 0;
 }
@@ -54,19 +54,15 @@ header {
 	position: fixed;
 	top: 0;
 	overflow: hidden;
-	filter: drop-shadow(0px 2px 2px #333);
-	background-color: rgb(255,255,255);
-	@supports (backdrop-filter: blur(20px)) or (-webkit-backdrop-filter: blur(20px)) {
-							    -webkit-backdrop-filter: blur(20px);
-							    backdrop-filter: blur(20px);
-							    background-color: rgba(100,100,100,.3); }
 }
 
 .nav {
-	padding: 5px 40px 5px 40px;
+	padding: 5px 80px 5px 80px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	background: #fff;
+	filter: drop-shadow(0px 2px 5px rgba(100,100,100,.5));
 }
 
 .nav_title {
@@ -76,7 +72,7 @@ header {
 }
 
 #logo {
-	height: 40px;
+	height: 60px;
 	margin-right: 10px;
 }
 
@@ -84,145 +80,60 @@ header {
 	order: 2;
 }
 
-/* Main - Page Starter */
+/* Main */
 
-.titleBlock {
-	top: 40px;
-	height: 98vh;
+.welcomeSlide {	
+	background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+				url('assets/Marsh_Image_2000_06.jpg');
+}
+
+.welcomeSlide h1 {
+	position: absolute;
+	bottom: 30%;
+	padding-left: 80px;
+	color: #ffffff;
+}
+
+.introSlide {
+	height: 70vh;
 	width: 100%;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 1fr 1fr;
-	grid-template-areas: "a b"
-						 "c d"
-						 "e f";
-	grid-column-gap: 10px;
-	grid-row-gap: 10px;
-
-}
-
-.titleBlock > * {
-	background-size: cover;
-	background-position: center;
-}
-
-#img_a {
-	background: url('assets/HMP_Image_2000_03.jpg');
-	grid-area: a;
-	background-size: cover;
-	background-position: center;
-}
-#img_b {
-	background: url('assets/RooseveltReno_Image_2000_03.jpg');
-	grid-area: b;
-	background-size: cover;
-	background-position: center;
-}
-#img_c {
-	background: url('assets/Marsh_Image_2000_06.jpg');
-	grid-area: c;
-	background-size: cover;
-	background-position: center;
-}
-#img_d {
-	background: url('assets/Marsh_Image_2000_08.jpg');
-	grid-area: d;
-	background-size: cover;
-	background-position: center;
-}
-#img_e {
-	background: url('assets/WhidbeyRetreat_Image_2000_02.jpg');
-	grid-area: e;
-	background-size: cover;
-	background-position: center;
-}
-#img_f {
-	background: url('assets/BarCharlie_Image_2000_02.jpg');
-	grid-area: f;
-	background-size: cover;
-	background-position: center;
-}
-
-
-
-/* Main - Bricks */
-
-.brickWrapper {
-	width: 100%;
-	display: grid;
-	grid-template-rows: 400px 300px 300px 300px 400px 400px 400px 400px;
-	grid-template-columns: 1fr;
-	grid-template-areas: "intro"
-						 "newHome"
-						 "remodel"
-						 "commercial"
-						 "workImg"
-						 "about"
-						 "testimonials"
-						 "outreach";
-}
-
-.brickWrapper > div {
-	padding: 5%;
-	display: grid;
+	background: #ffffff;
+	color: #333333;
+	display: flex;
 	align-items: center;
+}
+
+.introSlide h2 {
+	padding: 0 80px 0 80px;
+}
+
+.slideGallery {
+	width: 100%;
+	height: 90vh;
+	background: url('assets/Marsh_Image_2000_06.jpg');
+}
+.aboutSlide {
+	height: calc(100vh-100px);
+	display: inline-flex;
 	justify-content: center;
-	text-align: center;
-
+	padding: 10% 80px 0px 80px;
 }
 
-.brickWrapper > .intro {
-	grid-area: intro;
-	background-color: #fff;
-	color: #333;
+.aboutSlide div {
+	width: 30%;
+	padding: 0 10px 0 10px;
 }
 
-/* sets background images for bricks */
-.brickWrapper > .newHome {
-	grid-area: newHome;
+.parallax {
+	  background-attachment: fixed;
+	  background-position: center;
+	  background-repeat: no-repeat;
+	  background-size: cover;
+	  height: 100vh;
+	  width: 100vw
 }
 
-.brickWrapper > .remodel {
-	grid-area: remodel;
-}
 
-.brickWrapper > .commercial {
-	grid-area: commercial;
-}
-
-.brickWrapper > .workImg {
-	background: url('assets/Working_Stock.jpg');
-	grid-area: workImg;
-	background-size: cover;
-	background-position: center;
-}
-
-.brickWrapper > .about {
-	grid-area: about;
-	background-color: #333;
-	color: white;
-}
-
-.brickWrapper > .testimonials {
-	grid-area: testimonials;
-	background-color: #777;
-	color: white;
-}
-
-.brickWrapper > .outreach {
-	grid-area: outreach;
-}
-
-.outreach button {
-	background: transparent;
-	color: #333;
-	border: 1px solid #333;
-}
-
-.service {
-	background: #eee;
-	color: #333;
-}
 
 /* Footer */
 
@@ -242,31 +153,5 @@ footer > * {
 
 /* Larger Screens */
 
-@media only screen and (min-width: 1100px) {
-	.titleBlock {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 1fr 1fr;
-	grid-template-areas: "a b c"
-						 "d e f";
 
-	}
-	.brickWrapper {
-	width: 100%;
-	display: grid;
-	grid-template-rows: 480px 480px 100vh 400px 480px;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-areas: "intro  intro  intro"
-						 "newHome remodel commercial"
-						 "workImg workImg workImg"
-						 "about about about"
-						 "testimonials testimonials outreach";
-	}
-
-	h1 {
-		font-size: 4em;
-	}
-
-	h2 {
-		font-size: 2.5em;
-	}
+/* Medium Screens */
