@@ -15,7 +15,6 @@
 	padding: 10% 0 10% 0;
 	background-position: center;
 	background-size: cover;
-	color: #fff;
 }
 
 /* About Page */
@@ -23,19 +22,31 @@
 .welcomeAbout {
 	height: 60vh;
 	background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+				url('assets/HMP_Image_2000_03.jpg');
+	background-position: center;
+	background-size: cover;
+}
+
+.about {
+	padding: 10% 0 10% 0;
+}
+
+.welcomeContact {
+	height: 60vh;
+	background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
 				url('assets/family.jpg');
 	background-position: center;
 	background-size: cover;
 }
 
-.welcome h1, .welcomeAbout h1 {
+.welcome h1, .welcomeAbout h1, .welcomeContact h1 {
 	color: #fff;
 	font-weight: 700;
 	font-size: 3rem;
 }
 
 @media (min-width: 768px) {
-	.welcome h1, .welcomeAbout h1 {
+	.welcome h1, .welcomeAbout h1, .welcomeContact h1 {
 		font-size: 4rem;
 	}
 }
@@ -54,12 +65,16 @@ h2 {
 /* Footer Styles */
 
 footer {
-	color: #666;
+	color: #fff;
 	padding: 5% 0 5% 0;
 }
 
 footer a {
-	color: #666;
+	color: #fff;
+}
+
+footer a:hover {
+	color: #E39519;
 }
 
 .fab {
