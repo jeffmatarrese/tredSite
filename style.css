@@ -1,157 +1,103 @@
-/* Main body and text styles */
+/* Section Styles */
 
-body {
-	margin: 0;
-	padding: 0;
-	min-width: 100%;
-	font-size: 16px;
-	font-family: 'Montserrat', sans-serif;
+/* Home page */
+.welcome {
+	height: 60vh;
+	background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+				url('assets/Marsh_Image_2000_06.jpg');
+	background-position: center;
+	background-size: cover;
 }
 
-h1 {
-	font-size: 5em;
-	margin: 0;
+.endorsements {
+	background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),
+				url('assets/RooseveltReno_Image_2000_01.jpg');
+	padding: 10% 0 10% 0;
+	background-position: center;
+	background-size: cover;
+}
+
+/* About Page */
+
+.welcomeAbout {
+	height: 60vh;
+	background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+				url('assets/HMP_Image_2000_03.jpg');
+	background-position: center;
+	background-size: cover;
+}
+
+.about {
+	padding: 10% 0 10% 0;
+}
+
+.welcomeContact {
+	height: 60vh;
+	background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+				url('assets/BarCharlie_Image_2000_02.jpg');
+	background-position: center;
+	background-size: cover;
+}
+
+.welcome h1, .welcomeAbout h1, .welcomeContact h1 {
+	color: #fff;
 	font-weight: 700;
+	font-size: 3rem;
+}
+
+@media (min-width: 768px) {
+	.welcome h1, .welcomeAbout h1, .welcomeContact h1 {
+		font-size: 4rem;
+	}
 }
 
 h2 {
-	font-size: 2.5em;
+	color #fff;
 	font-weight: 700;
-	margin: 0;
+	font-size: 2.5rem;
 }
 
-h3 {
-	font-size: 1.5em;
-	font-weight: 400;
-	margin: 0;
-}
-p {
-	font-weight: 400;
-	margin: 0;
+.carousel-inner {
+	max-height: 100vh !important;
+	object-fit: cover;
 }
 
-button {
-	background: #000;
-	color: #fff;
-	border: 1px solid #fff;
-	font-weight: 300;
-	font-size: 18px;
-	height: 40px;
-	margin: 0;
-}
-
-button:hover {
-	color: #000;
-	mix-blend-mode: screen;
-	background: #fff;
-}
-
-/* Header */
-
-header {
-	width: 100%;
-	z-index: 100;
-	position: fixed;
-	top: 0;
-	overflow: hidden;
-}
-
-.nav {
-	padding: 5px 80px 5px 80px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	background: #fff;
-	filter: drop-shadow(0px 2px 5px rgba(100,100,100,.5));
-}
-
-.nav_title {
-	display: flex;
-	align-items: center;
-	order:1;
-}
-
-#logo {
-	height: 60px;
-	margin-right: 10px;
-}
-
-#header_cta {
-	order: 2;
-}
-
-/* Main */
-
-.welcomeSlide {	
-	background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
-				url('assets/Marsh_Image_2000_06.jpg');
-}
-
-.welcomeSlide h1 {
-	position: absolute;
-	bottom: 30%;
-	padding-left: 80px;
-	color: #ffffff;
-}
-
-.introSlide {
-	height: 70vh;
-	width: 100%;
-	background: #ffffff;
-	color: #333333;
-	display: flex;
-	align-items: center;
-}
-
-.introSlide h2 {
-	padding: 0 80px 0 80px;
-}
-
-.slideGallery {
-	width: 100%;
-	height: 90vh;
-	background: url('assets/Marsh_Image_2000_06.jpg');
-}
-.aboutSlide {
-	height: calc(100vh-100px);
-	display: inline-flex;
-	justify-content: center;
-	padding: 10% 80px 0px 80px;
-}
-
-.aboutSlide div {
-	width: 30%;
-	padding: 0 10px 0 10px;
-}
-
-.parallax {
-	  background-attachment: fixed;
-	  background-position: center;
-	  background-repeat: no-repeat;
-	  background-size: cover;
-	  height: 100vh;
-	  width: 100vw
-}
-
-
-
-/* Footer */
+/* Footer Styles */
 
 footer {
-	height: 100px;
-	width: 100%;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	background: #333;
+	color: #fff;
+	padding: 5% 0 5% 0;
 }
 
-footer > * {
-	color: white;
-	font-size: 12px;
+footer a {
+	color: #fff;
 }
 
-/* Larger Screens */
+footer a:hover {
+	color: #E39519;
+}
 
+.fab {
+	margin: 0 .5rem 0 .5rem;
+}
 
-/* Medium Screens */
+/* Nav Styles */
+
+.navbar-collapse .nav-link {
+  padding: .25rem 0;
+  color: rgba(0, 0, 0, .5);
+  background-color: transparent;
+  border-bottom: .25rem solid transparent;
+  margin-left: 1rem;
+}
+
+.navbar-collapse .nav-link:hover,
+.navbar-collapse .nav-link:focus {
+  border-bottom-color: rgba(0, 0, 0, .25);
+}
+
+.navbar-collapse .active {
+  color: #000;
+  border-bottom-color: #000;
+}
+
